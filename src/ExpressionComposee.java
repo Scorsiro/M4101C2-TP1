@@ -6,21 +6,25 @@ public abstract class ExpressionComposee extends Operande {
 		return this.operandeDroite;
 	}
 
-	public Operande setOperandeDroite() {
+	public void setOperandeDroite(Operande o) {
 		// TODO - implement ExpressionComposee.setOperandeDroite
-		throw new UnsupportedOperationException();
+		this.operandeDroite = o ; 
 	}
 
 	public abstract char getSymbole();
 
 	/**
 	 * 
+         * @param visiteur
 	 * @param operateur
 	 * @param operande
 	 */
-	public void ajouterOperande(char operateur, Operande operande) {
-		// TODO - implement ExpressionComposee.ajouterOperande
-		throw new UnsupportedOperationException();
-	}
-
+	
+       public abstract void accept(Visiteur visiteur);
+        
+       /*public void ajouterOperande(char operateur, Operande operande) {
+            this.setOperandeDroite(this);
+            
+		
+	}*/
 }
