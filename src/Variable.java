@@ -20,8 +20,10 @@ public class Variable extends ExpressionSimple {
 	 * @param n
 	 */
 	public Variable(char nom, int n) {
-		// TODO - implement Variable.Variable
-		throw new UnsupportedOperationException();
+            // constructor
+            this.nom = nom;
+            this.n = n;
+                
 	}
 
 }
