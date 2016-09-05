@@ -1,9 +1,6 @@
 public class ExpressionDivision extends ExpressionBinaire {
 
-	public char getSymbole() {
-		// TODO - implement ExpressionDivision.getSymbole
-		throw new UnsupportedOperationException();
-	}
+	
 
 	/**
 	 * 
@@ -17,7 +14,11 @@ public class ExpressionDivision extends ExpressionBinaire {
 
     @Override
     public void accept(Visiteur visiteur) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        visiteur.visit(this);
+    }
+    
+    public char getSymbole() {
+		return '/';
     }
 
 }

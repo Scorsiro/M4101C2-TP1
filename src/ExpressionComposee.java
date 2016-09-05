@@ -11,7 +11,7 @@ public abstract class ExpressionComposee extends Operande {
 		this.operandeDroite = o ; 
 	}
 
-	public abstract char getSymbole();
+	public abstract String getSymbole();
 
 	/**
 	 * 
