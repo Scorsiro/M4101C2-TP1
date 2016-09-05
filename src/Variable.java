@@ -19,11 +19,10 @@ public class Variable extends ExpressionSimple {
 	 * @param nom
 	 * @param n
 	 */
-	public Variable(char nom, int n) {
-            // constructor
-            this.nom = nom;
-            this.n = n;
-                
-	}
 
+
+        public Variable(char nom,int n ) {
+        this.setN(n);
+        this.setNom(nom);
+    }
 }
