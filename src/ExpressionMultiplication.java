@@ -11,8 +11,8 @@ public class ExpressionMultiplication extends ExpressionBinaire {
             this.setOperandeDroite(opd);
             this.setOperandeGauche(opg);
         }
-        public char getSymbole() {
-            return '*';
+        public String getSymbole() {
+            return "*";
 	}
 
     @Override

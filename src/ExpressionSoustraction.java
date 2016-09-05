@@ -12,8 +12,8 @@ public class ExpressionSoustraction extends ExpressionBinaire {
                 this.setOperandeGauche(opg);
 	}
 
-        public char getSymbole() {
-            return '-'; 
+        public String getSymbole() {
+            return "-"; 
 	}
         
     @Override

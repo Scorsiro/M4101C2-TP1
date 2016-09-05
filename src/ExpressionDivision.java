@@ -17,8 +17,8 @@ public class ExpressionDivision extends ExpressionBinaire {
         visiteur.visit(this);
     }
     
-    public char getSymbole() {
-		return '/';
+    public String getSymbole() {
+		return "/";
     }
 
 }
