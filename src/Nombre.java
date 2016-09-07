@@ -1,15 +1,17 @@
+
 public class Nombre extends ExpressionSimple {
 
-    public Nombre() {
-        this.setN(n);
+    public Nombre(int n) {
+        super();
+        super.setN(n);
+        
     }
 
-	/**
-	 * 
-	 * @param n
-         *
-	 */
-     
-	
 
+
+    /**
+     *
+     * @param n
+     *
+     */
 }
