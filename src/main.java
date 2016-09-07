@@ -14,6 +14,12 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //créer objet
+        Nombre n = new Nombre(2);
+        Variable var = new Variable('t', n.getN());
+        System.out.println(var.getNom());
+        
+        System.out.println(var.getN());
         // TODO code application logic here
     }
     
