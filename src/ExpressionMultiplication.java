@@ -1,23 +1,16 @@
 public class ExpressionMultiplication extends ExpressionBinaire {
 
 	
-
-	/**
-	 * 
-	 * @param opg
-	 * @param opd
-	 */
-	public void ExpressionMultiplication(Operande opg, Operande opd) {
-            this.setOperandeDroite(opd);
-            this.setOperandeGauche(opg);
+	public ExpressionMultiplication(Operande opg, Operande opd) {
+            super(opg,opd);
         }
         public String getSymbole() {
             return "*";
 	}
 
     @Override
-    public void accept(Visiteur visiteur) {
-        visiteur.visit(this);
+    public Object accept(Visiteur visiteur) {
+        return visiteur.visit(this);
     }
 
 }

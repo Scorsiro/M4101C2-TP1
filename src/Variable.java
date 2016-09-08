@@ -4,8 +4,8 @@ public class Variable extends ExpressionSimple {
     private char nom;
 
     public Variable(char nom, int n) {
-        this.setN(n);
-        this.setNom(nom);
+        super(n);
+        setNom(nom);
     }
 
     public char getNom() {
@@ -18,6 +18,11 @@ public class Variable extends ExpressionSimple {
      */
     public void setNom(char nom) {
         this.nom = nom;
+    }
+
+    @Override
+    public Object accept(Visiteur visiteur) {
+        return visiteur.visit(this);
     }
 
     /**

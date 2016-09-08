@@ -1,15 +1,8 @@
 public class ExpressionSoustraction extends ExpressionBinaire {
 
 	
-
-	/**
-	 * 
-	 * @param opg
-	 * @param opd
-	 */
-	public void ExpressionSoustraction(Operande opg, Operande opd) {
-		this.setOperandeDroite(opd);
-                this.setOperandeGauche(opg);
+	public ExpressionSoustraction(Operande opg, Operande opd) {
+            super(opg,opd);
 	}
 
         public String getSymbole() {
@@ -17,8 +10,8 @@ public class ExpressionSoustraction extends ExpressionBinaire {
 	}
         
     @Override
-    public void accept(Visiteur visiteur) {
-        visiteur.visit(this);
+    public Object accept(Visiteur visiteur) {
+        return visiteur.visit(this);
     }
 
 }

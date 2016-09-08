@@ -15,11 +15,16 @@ public class main {
      */
     public static void main(String[] args) {
         //créer objet
-        Nombre n = new Nombre(2);
-        Variable var = new Variable('t', n.getN());
+        Operande n1 = new Nombre(2);
+        Operande n2 = new Nombre(3);
+        Variable var = new Variable('t', ((Nombre)n1).getN());
         System.out.println(var.getNom());
         
         System.out.println(var.getN());
+        
+        ExpressionAddition expression = new ExpressionAddition(n1,n2);
+        
+        
         // TODO code application logic here
     }
     

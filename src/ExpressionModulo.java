@@ -1,22 +1,39 @@
 public class ExpressionModulo extends ExpressionComposee {
 
-	public char getSymbole() {
+        private int degre;
+    
+        
+	public ExpressionModulo(int degre, Operande opd) {
+		// TODO - implement ExpressionModulo.ExpressionModulo
+		super(opd);
+                setDegre(degre);
+	}
+        
+        
+	public String getSymbole() {
 		// TODO - implement ExpressionModulo.getSymbole
-		throw new UnsupportedOperationException();
+		return "%"+this.getDegre();
 	}
 
-	/**
-	 * 
-	 * @param opd
-	 */
-	public ExpressionModulo(Operande opd) {
-		// TODO - implement ExpressionModulo.ExpressionModulo
-		throw new UnsupportedOperationException();
-	}
+	
 
     @Override
-    public void accept(Visiteur visiteur) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Object accept(Visiteur visiteur) {
+        return visiteur.visit(this);
+    }
+
+    /**
+     * @return the degre
+     */
+    public int getDegre() {
+        return degre;
+    }
+
+    /**
+     * @param degre the degre to set
+     */
+    public void setDegre(int degre) {
+        this.degre = degre;
     }
 
 }

@@ -2,24 +2,37 @@ public class ExpressionPuissance extends ExpressionComposee {
 
 	private int degre;
 
-	public char getSymbole() {
+        
+        public ExpressionPuissance(int degre, Operande opd) {
+		// TODO - implement ExpressionPuissance.ExpressionPuissance
+		super(opd);
+                setDegre(degre);
+	}
+        
+        
+	public String getSymbole() {
 		// TODO - implement ExpressionPuissance.getSymbole
-		throw new UnsupportedOperationException();
+		return "*"+this.getDegre();
 	}
 
-	/**
-	 * 
-	 * @param degre
-	 * @param opd
-	 */
-	public ExpressionPuissance(int degre, Operande opd) {
-		// TODO - implement ExpressionPuissance.ExpressionPuissance
-		throw new UnsupportedOperationException();
-	}
 
     @Override
-    public void accept(Visiteur visiteur) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Object accept(Visiteur visiteur) {
+        return visiteur.visit(this);
+    }
+
+    /**
+     * @return the degre
+     */
+    public int getDegre() {
+        return degre;
+    }
+
+    /**
+     * @param degre the degre to set
+     */
+    public void setDegre(int degre) {
+        this.degre = degre;
     }
 
 }

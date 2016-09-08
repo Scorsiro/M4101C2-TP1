@@ -5,19 +5,19 @@ public class ExpressionAddition extends ExpressionBinaire {
 	 * @param opg
 	 * @param opd
 	 */
-	public void ExpressionAddition(Operande opg, Operande opd) {
-            this.setOperandeGauche(opg) ; 
-            this.setOperandeDroite(opd);
+	public ExpressionAddition(Operande opg, Operande opd) {
+            super(opg,opd);
             
 	}
 
+        @Override
 	public String getSymbole() {
 		return "+"; 
 	}
 
     @Override
-    public void accept(Visiteur visiteur) {
-       visiteur.visit(this);
+    public Object accept(Visiteur visiteur) {
+       return visiteur.visit(this);
     }
 
 }

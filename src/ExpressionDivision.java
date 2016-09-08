@@ -7,16 +7,16 @@ public class ExpressionDivision extends ExpressionBinaire {
 	 * @param opg
 	 * @param opd
 	 */
-	public void ExpressionDivision(Operande opg, Operande opd) {
-		// TODO - implement ExpressionDivision.ExpressionDivision
-		throw new UnsupportedOperationException();
-	}
+    public ExpressionDivision(Operande opg, Operande opd) {
+        super(opg,opd);
+    }
 
     @Override
-    public void accept(Visiteur visiteur) {
-        visiteur.visit(this);
+    public Object accept(Visiteur visiteur) {
+        return visiteur.visit(this);
     }
     
+        @Override
     public String getSymbole() {
 		return "/";
     }
