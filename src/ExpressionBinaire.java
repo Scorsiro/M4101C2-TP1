@@ -1,22 +1,22 @@
 public abstract class ExpressionBinaire extends ExpressionComposee {
 
-	Operande operandeGauche;
+	Operande operandeDroite;
 
         public ExpressionBinaire(Operande operandeGauche, Operande operandeDroite) {
-            super(operandeDroite);
-            this.operandeGauche = operandeGauche;
+            super(operandeGauche);
+            setOperandeDroite(operandeDroite);
         }
 
-	public Operande getOperandeGauche() {
-		return this.operandeGauche;
+	public Operande getOperandeDroite() {
+		return this.operandeDroite;
 	}
 
 	/**
 	 * 
 	 * @param o
 	 */
-	public void setOperandeGauche(Operande o) {
-		this.operandeGauche = o;
+	public void setOperandeDroite(Operande o) {
+		this.operandeDroite = o;
 	}
 
 }

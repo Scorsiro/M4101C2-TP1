@@ -1,21 +1,21 @@
 public abstract class ExpressionComposee extends Operande {
 
-	Operande operandeDroite;
+	Operande operandeGauche;
 
         
-        public ExpressionComposee(Operande operandeDroite) {
-            setOperandeDroite(operandeDroite);
+        public ExpressionComposee(Operande operandeGauche) {
+            setOperandeGauche(operandeGauche);
         }
         
-	public Operande getOperandeDroite() {
-		return this.operandeDroite;
+	public Operande getOperandeGauche() {
+		return this.operandeGauche;
 	}
 
     
 
-	public void setOperandeDroite(Operande o) {
-		// TODO - implement ExpressionComposee.setOperandeDroite
-		this.operandeDroite = o ; 
+	public void setOperandeGauche(Operande o) {
+		// TODO - implement ExpressionComposee.setOperandeGauche
+		this.operandeGauche = o ; 
 	}
 
 	public abstract String getSymbole();
@@ -30,7 +30,7 @@ public abstract class ExpressionComposee extends Operande {
        //public abstract void accept(Visiteur visiteur);
         
        /*public void ajouterOperande(char operateur, Operande operande) {
-            this.setOperandeDroite(this);
+            this.setOperandeGauche(this);
             
 		
 	}*/

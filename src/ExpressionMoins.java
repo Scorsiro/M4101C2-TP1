@@ -1,7 +1,7 @@
 public class ExpressionMoins extends ExpressionComposee {
 
-        public ExpressionMoins(Operande operandeDroite) {
-            super(operandeDroite);
+        public ExpressionMoins(Operande operandeGauche) {
+            super(operandeGauche);
         }
 
     

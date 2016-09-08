@@ -1,18 +1,16 @@
-public class ExpressionModulo extends ExpressionComposee {
+public class ExpressionModulo extends ExpressionBinaire {
 
-        private int degre;
     
         
-	public ExpressionModulo(int degre, Operande opd) {
+	public ExpressionModulo(Operande opg, Operande opd) {
 		// TODO - implement ExpressionModulo.ExpressionModulo
-		super(opd);
-                setDegre(degre);
+		super(opg, opd);
 	}
         
         
 	public String getSymbole() {
 		// TODO - implement ExpressionModulo.getSymbole
-		return "%"+this.getDegre();
+		return "%";
 	}
 
 	
@@ -20,20 +18,6 @@ public class ExpressionModulo extends ExpressionComposee {
     @Override
     public Object accept(Visiteur visiteur) {
         return visiteur.visit(this);
-    }
-
-    /**
-     * @return the degre
-     */
-    public int getDegre() {
-        return degre;
-    }
-
-    /**
-     * @param degre the degre to set
-     */
-    public void setDegre(int degre) {
-        this.degre = degre;
     }
 
 }

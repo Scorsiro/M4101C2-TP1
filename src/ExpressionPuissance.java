@@ -1,18 +1,15 @@
-public class ExpressionPuissance extends ExpressionComposee {
-
-	private int degre;
+public class ExpressionPuissance extends ExpressionBinaire {
 
         
-        public ExpressionPuissance(int degre, Operande opd) {
+        public ExpressionPuissance(Operande opg, Operande opd) {
 		// TODO - implement ExpressionPuissance.ExpressionPuissance
-		super(opd);
-                setDegre(degre);
+		super(opg,opd);
 	}
         
         
 	public String getSymbole() {
 		// TODO - implement ExpressionPuissance.getSymbole
-		return "*"+this.getDegre();
+		return "^";
 	}
 
 
@@ -21,18 +18,5 @@ public class ExpressionPuissance extends ExpressionComposee {
         return visiteur.visit(this);
     }
 
-    /**
-     * @return the degre
-     */
-    public int getDegre() {
-        return degre;
-    }
-
-    /**
-     * @param degre the degre to set
-     */
-    public void setDegre(int degre) {
-        this.degre = degre;
-    }
 
 }
