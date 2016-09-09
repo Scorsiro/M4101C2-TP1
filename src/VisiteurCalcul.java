@@ -8,30 +8,18 @@ public class VisiteurCalcul extends Visiteur {
                 return ((int)expression.getOperandeGauche().accept(this))+((int)expression.getOperandeDroite().accept(this));
         }
 
-	/**
-	 * 
-	 * @param expression
-	 */
+        @Override
 	public Object visit(ExpressionSoustraction expression) {
-		// TODO - implement VisiteurCalcul.visit
 		return ((int)expression.getOperandeGauche().accept(this))-((int)expression.getOperandeDroite().accept(this));
 	}
 
-	/**
-	 * 
-	 * @param expression
-	 */
+        @Override
 	public Object visit(ExpressionMultiplication expression) {
-		// TODO - implement VisiteurCalcul.visit
 		return ((int)expression.getOperandeGauche().accept(this))*((int)expression.getOperandeDroite().accept(this));
 	}
 
-	/**
-	 * 
-	 * @param expression
-	 */
+        @Override
 	public Object visit(ExpressionDivision expression) {
-		// TODO - implement VisiteurCalcul.visit
 		return ((int)expression.getOperandeGauche().accept(this))/((int)expression.getOperandeDroite().accept(this));
 	}
 

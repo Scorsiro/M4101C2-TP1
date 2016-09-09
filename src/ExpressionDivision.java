@@ -2,11 +2,6 @@ public class ExpressionDivision extends ExpressionBinaire {
 
 	
 
-	/**
-	 * 
-	 * @param opg
-	 * @param opd
-	 */
     public ExpressionDivision(Operande opg, Operande opd) {
         super(opg,opd);
     }

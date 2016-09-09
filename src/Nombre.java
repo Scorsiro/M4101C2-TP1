@@ -10,11 +10,4 @@ public class Nombre extends ExpressionSimple {
         return visiteur.visit(this);
     }
 
-
-
-    /**
-     *
-     * @param n
-     *
-     */
 }

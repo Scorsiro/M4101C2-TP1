@@ -11,12 +11,9 @@ public abstract class ExpressionBinaire extends ExpressionComposee {
 		return this.operandeDroite;
 	}
 
-	/**
-	 * 
-	 * @param o
-	 */
 	public void setOperandeDroite(Operande o) {
 		this.operandeDroite = o;
 	}
+        
 
 }

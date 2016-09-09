@@ -3,27 +3,23 @@ public class VisiteurChaine extends Visiteur {
 
         @Override
 	public Object visit(ExpressionAddition expression) {
-		// TODO - implement VisiteurChaine.visit
                 return ("("+expression.getOperandeGauche().accept(this)+"+"+expression.getOperandeDroite().accept(this)+")");
 	}
 
 
         @Override
 	public Object visit(ExpressionSoustraction expression) {
-		// TODO - implement VisiteurChaine.visit
                 return ("("+expression.getOperandeGauche().accept(this)+"-"+expression.getOperandeDroite().accept(this)+")");
 	}
 
 
         @Override
 	public Object visit(ExpressionMultiplication expression) {
-		// TODO - implement VisiteurChaine.visit
                 return ("("+expression.getOperandeGauche().accept(this)+"*"+expression.getOperandeDroite().accept(this)+")");
 	}
 
         @Override
 	public Object visit(ExpressionDivision expression) {
-		// TODO - implement VisiteurChaine.visit
                 return ("("+expression.getOperandeGauche().accept(this)+"/"+expression.getOperandeDroite().accept(this)+")");
 	}
 

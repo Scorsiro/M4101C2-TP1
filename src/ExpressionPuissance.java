@@ -7,16 +7,17 @@ public class ExpressionPuissance extends ExpressionBinaire {
 	}
         
         
+        @Override
 	public String getSymbole() {
 		// TODO - implement ExpressionPuissance.getSymbole
 		return "^";
 	}
 
 
-    @Override
-    public Object accept(Visiteur visiteur) {
-        return visiteur.visit(this);
-    }
+        @Override
+        public Object accept(Visiteur visiteur) {
+            return visiteur.visit(this);
+        }
 
 
 }

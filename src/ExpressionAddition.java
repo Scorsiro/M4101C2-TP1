@@ -1,10 +1,6 @@
 public class ExpressionAddition extends ExpressionBinaire {
 
-	/**
-	 * 
-	 * @param opg
-	 * @param opd
-	 */
+
 	public ExpressionAddition(Operande opg, Operande opd) {
             super(opg,opd);
             
@@ -15,9 +11,9 @@ public class ExpressionAddition extends ExpressionBinaire {
 		return "+"; 
 	}
 
-    @Override
-    public Object accept(Visiteur visiteur) {
-       return visiteur.visit(this);
+        @Override
+        public Object accept(Visiteur visiteur) {
+           return visiteur.visit(this);
     }
 
 }

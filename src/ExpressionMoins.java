@@ -5,15 +5,10 @@ public class ExpressionMoins extends ExpressionComposee {
         }
 
     
+        @Override
 	public String getSymbole() {
-		// TODO - implement ExpressionMoins.getSymbole
 		return "-";
 	}
-
-	/**
-	 * 
-	 * @param opd
-	 */
 
         @Override
         public Object accept(Visiteur visiteur) {

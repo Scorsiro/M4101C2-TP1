@@ -12,10 +12,7 @@ public class Variable extends ExpressionSimple {
         return this.nom;
     }
  
-    /**
-     *
-     * @param nom
-     */
+
     public void setNom(char nom) {
         this.nom = nom;
     }
@@ -25,9 +22,4 @@ public class Variable extends ExpressionSimple {
         return visiteur.visit(this);
     }
 
-    /**
-     *
-     * @param nom
-     * @param n
-     */
 }
