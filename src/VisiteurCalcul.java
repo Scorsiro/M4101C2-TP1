@@ -30,7 +30,7 @@ public class VisiteurCalcul extends Visiteur {
 
         @Override
         public Object visit(ExpressionPuissance expression) {
-            return ((int)expression.getOperandeGauche().accept(this))^((int)expression.getOperandeDroite().accept(this));
+            return (int)Math.pow(((int)expression.getOperandeGauche().accept(this)),((int)expression.getOperandeDroite().accept(this)));
         }
 
         @Override
